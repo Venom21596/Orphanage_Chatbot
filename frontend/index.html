@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sneha Jyothi – Child Care Assistant</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Floating Action Button -->
+  <div id="fab" onclick="openChat()" title="Chat with us">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+    </svg>
+    <span class="fab-badge" id="fab-badge">1</span>
+  </div>
+
+  <!-- Chat Widget -->
+  <div id="widget">
+
+    <!-- Header -->
+    <div class="hdr">
+      <div class="hdr-avatar">🏠</div>
+      <div class="hdr-info">
+        <div class="hdr-title">Sneha Jyothi Assistant</div>
+        <div class="hdr-sub">
+          <span class="online-dot"></span>
+          Online &middot; Typically replies instantly
+        </div>
+      </div>
+      <div class="hdr-actions">
+        <button class="hdr-btn" onclick="minimizeChat()" title="Minimize">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+          </svg>
+        </button>
+        <button class="hdr-btn" onclick="closeChat()" title="Close">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar">
+      <div class="progress-fill" id="progress"></div>
+    </div>
+
+    <!-- Chat Messages -->
+    <div class="chat-box" id="chat-box">
+      <div class="date-divider">Today</div>
+    </div>
+
+    <!-- Quick Reply Options -->
+    <div id="options"></div>
+
+    <!-- Input Area -->
+    <div class="input-area">
+      <input id="user-input" type="text" placeholder="Type your message…" autocomplete="off" />
+      <button class="send-btn" id="send-btn" title="Send">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+             stroke-linecap="round" stroke-linejoin="round">
+          <line x1="22" y1="2" x2="11" y2="13"/>
+          <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+        </svg>
+      </button>
+    </div>
+
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
